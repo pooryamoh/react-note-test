@@ -22,9 +22,9 @@ function App() {
   const [image] = useImage("/GClef.svg");
   const [index, setIndex] = useState<number>(getRandomIntInclusive(-9, 13));
   const [answer, setAnswer] = useState<string | null>(null);
-  const indexValue = notes.at(
+  const indexValue = notes[
     ((index % notes.length) + notes.length) % notes.length
-  );
+  ];
   return (
     <div
       style={{
@@ -65,7 +65,7 @@ function App() {
             setIndex(getRandomIntInclusive(-9, 13));
             setAnswer(null);
           }}
-          style={{marginTop: "15px", backgroundColor:"blueviolet"}}
+          style={{ marginTop: "15px", backgroundColor: "blueviolet" }}
         >
           Next
         </Button>
